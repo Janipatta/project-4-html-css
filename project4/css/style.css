@@ -1,0 +1,167 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            ;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+        
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            
+        }
+        
+        .plan {
+            background-color: #221f1f;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 2px solid #e50914;
+        }
+        
+        .plan:hover {
+            transform: scale(1.05);
+        }
+        
+        .plan:last-child {
+            border: 2px solid #e50914;
+        }
+        
+        .plan h2 {
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .price {
+            font-size: 2em;
+            color: #e50914;
+            margin-bottom: 20px;
+        }
+        
+        .features {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        
+        .features li {
+            list-style: none;
+            padding: 8px 0;
+            border-bottom: 1px solid #444;
+        }
+        
+        button {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #c40812;
+        }
+
+        /* ---------- GLOBAL RESPONSIVE FIX ---------- */
+.plan {
+    max-width: 100%;
+}
+
+/* ---------- MOBILE PHONES ---------- */
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    .plans {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .plan {
+        padding: 20px;
+    }
+
+    .plan h2 {
+        font-size: 1.4em;
+    }
+
+    .price {
+        font-size: 1.6em;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* ---------- TABLETS ---------- */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    h1 {
+        font-size: 2.1em;
+    }
+
+    .plans {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plan {
+        padding: 25px;
+    }
+}
+
+/* ---------- LAPTOPS ---------- */
+@media (min-width: 769px) and (max-width: 1200px) {
+
+    .plans {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    h1 {
+        font-size: 2.3em;
+    }
+}
+
+/* ---------- LARGE SCREENS ---------- */
+@media (min-width: 1201px) {
+
+    .container {
+        max-width: 1300px;
+    }
+
+    h1 {
+        font-size: 2.6em;
+    }
+}
+
